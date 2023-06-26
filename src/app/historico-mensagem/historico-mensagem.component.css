@@ -51,24 +51,13 @@ body {
 }
 
 .historicoDiv {
-    background-color: lightsalmon;
+    background-color: whitesmoke;
     width: 100%;
-    height: 75%; 
+    height: 80%; 
 }
 
-.rodape {
-    background-color: #128C7E;
-    text-align: center;
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.rodape p {
-    padding-top: 20px;
-    color: white;
-}
+
+
 
 
