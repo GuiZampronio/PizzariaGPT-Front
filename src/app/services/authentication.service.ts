@@ -7,6 +7,7 @@ import { AuthenticationClient } from '../clients/authentication.client';
 })
 export class AuthenticationService {
   private tokenKey = 'token';
+  private username = 'username';
 
   constructor(
     private authenticationClient: AuthenticationClient,
@@ -16,6 +17,7 @@ export class AuthenticationService {
   public login(username: string, password: string): void {
     this.authenticationClient.login(username, password).subscribe((token) =>{
       localStorage.setItem(this.tokenKey, token);
+      localStorage.setItem(this.username, username);
       this.router.navigate(['/']);
     })
   }
@@ -25,6 +27,7 @@ export class AuthenticationService {
       .register(username, email, password)
       .subscribe((token) => {
         localStorage.setItem(this.tokenKey, token);
+        localStorage.setItem(this.username, username)
         this.router.navigate(['/']);
       });
   }

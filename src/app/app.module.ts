@@ -15,6 +15,7 @@ import { HistoricoMensagemComponent } from './historico-mensagem/historico-mensa
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
+    MatIconModule,
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },],
   bootstrap: [AppComponent]

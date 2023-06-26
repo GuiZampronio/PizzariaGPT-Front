@@ -1,2 +1,27 @@
-<p>historico-mensagem works!</p>
-<button mat-raised-button color="primary" (click)="logout()">Logout</button>
+<body>
+
+    <div class="header">
+        <div class="flexHeader">
+            <h1>Seja bem-vindo {{ username }}!</h1>
+            <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="filterDiv">
+        <mat-form-field class="example-form-field">
+            <mat-label class="matlabelFilter">Digite um número de telefone</mat-label>
+            <input matInput type="text" [(ngModel)]="numeroTelefone">
+            <button *ngIf="numeroTelefone" matSuffix mat-icon-button aria-label="Clear" (click)="numeroTelefone=''">
+              <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <button id="filtrarBotao" mat-raised-button color="primary" (click)="logout()">Filtrar</button>
+    </div>
+
+
+
+</body>
+
+
+

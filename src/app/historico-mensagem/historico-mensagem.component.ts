@@ -8,11 +8,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./historico-mensagem.component.css']
 })
 export class HistoricoMensagemComponent implements OnInit {
+  public username!: string | null;
+  public numeroTelefone!: string
+
   constructor(
     private authenticationService: AuthenticationService,
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.username = localStorage.getItem("username");
+    if(this.username != null){
+      this.username = this.username.toUpperCase();
+    }
+  }
 
   logout(): void {
     this.authenticationService.logout();
